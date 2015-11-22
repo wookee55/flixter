@@ -47,12 +47,16 @@
   </header>
   
   <main>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
   </main>
 
   <footer>
-    <div class="contaienr">
-      FOOTER
+    <div class="container">
+      <b>Teachers</b>
+      <br />
+      <%= link_to 'Teach a Course', new_instructor_course_path %>
     </div>
   </footer>
 </body>
