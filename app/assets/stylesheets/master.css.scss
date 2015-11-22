@@ -27,7 +27,7 @@ h4 {
 }
 
 main {
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - $footer-height);
 }
 
 section {
