@@ -2,7 +2,7 @@
   <h1>Learn something today</h1>
   <hr />
   <% @courses.each do |course| %>
-    <h2><%= course.title %></h2>
+    <h2><%= link_to course.title, course_path(course) %></h2>
     <br />
     <div class="row">
       <div class="col-sm-8 col-xs-12">
