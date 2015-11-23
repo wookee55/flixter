@@ -36,14 +36,6 @@ main {
   min-height: calc(100vh - #{$header-height} - #{$footer-height});
 }
 
-section {
-  margin-top: 50px;
-  
-  &:first-child {
-    margin-top: 0;
-  }
-}
-
 .btn {
   border-radius: 0;
 }
