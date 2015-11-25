@@ -1,4 +1,5 @@
 <h1><%= current_course.title %></h1>
+<%= image_tag current_course.image, :class => 'img-responsive' %>
 <br>
 <%= link_to 'Preview As Student...', course_path(current_course), :class => 'btn btn-warning pull-right' %>
 <br>
