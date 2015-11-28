@@ -5,4 +5,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :courses
+  has_many :enrollments
+  has_many :enrolled_courses, :through => :enrollments, :source => :course
+
+  def enrolled_in?(course)
+    enrolled_courses = enrollments.collect(&:course)
+
+    return enrolled_courses.include?(course)
+  end
 end

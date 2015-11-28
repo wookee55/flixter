@@ -1,10 +1,14 @@
 footer {
-  background-color: rgba(36,32,33,0.9);
+  background-color: #000;
   color: #fff;
-  height: $footer-height;
-  padding: 10px 0px;
+  padding: 50px 0px;
 
-  a {
+  a,
+  a:hover {
     color: #fff;
+  }
+
+  .links {
+    margin-top: 20px;
   }
 }

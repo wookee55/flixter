@@ -12,6 +12,9 @@ body {
 
 h1, h2, h3, h4 {
   font-weight: bold;
+}
+
+h1, h2, h3 {
   text-transform: uppercase;
 }
 
@@ -43,57 +46,5 @@ img {
 main {
   margin-top: $header-height;
   min-height: calc(100vh - #{$header-height} - #{$footer-height});
-}
-
-.btn {
-  border-radius: 0;
-}
-
-.section-hero {
-  background-image: url('hero.jpg');
-  background-size: cover;
-  color:white;
-  height: 489px;
-  left: 50%;
-  position: relative;
-  transform: translateX(-50%);
-  width: 100vw;
-
-  &:before {
-    background:rgba(0,0,0, 0.5);
-    bottom: 0;
-    content: "";
-    display: block;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .col {
-    h1, p {
-      text-shadow: rgba(0,0,0,0.95) 1px 1px; 
-    }
-  }
-}
-
-.section-features {
-  h4 {
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  .col {
-    padding: 40px 20px;
-
-    &:nth-child(odd) {
-      background-color: #eee;
-    }
-  }
+  padding: 50px 0;
 }
