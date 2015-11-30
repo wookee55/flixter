@@ -1,3 +1,17 @@
 // Place all the styles related to the instructor/courses controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.courses-show {
+  .section {
+    border: 1px solid;
+    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+    padding:20px;
+  }
+
+  .lesson {
+    background-color: #000;
+    color: #fff;
+    margin: 10px;
+    padding:8px;
+  }
+}
