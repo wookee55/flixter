@@ -63,16 +63,45 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-sm-6 col-md-3">
+        <div class="col col-xs-6 col-md-3">
           <h4>Teachers</h4>
           <ul class="links">
             <li><%= link_to 'Teach a Course', new_instructor_course_path %></li>
+            <li><%= link_to 'My Dashboard', '#' %></li>
           </ul>
         </div>
-        <div class="col-sm-6 col-md-3">
+        <div class="col col-xs-6 col-md-3">
           <h4>About</h4>
           <ul class="links">
+            <li><%= link_to 'Team', '#' %></li>
+            <li><%= link_to 'Careers', '#' %></li>
             <li><%= link_to 'Privacy Policy', privacy_path %></li>
+          </ul>
+        </div>
+        <div class="col col-xs-6 col-md-3">
+          <h4>Contact</h4>
+          <ul class="links">
+            <li><%= link_to 'wookee55@live.com', 'mailto:wookee55@live.com' %></li>
+          </ul>
+        </div>
+        <div class="col col-xs-6 col-md-3">
+          <h4>Social</h4>
+          <ul class="social-links links">
+            <li>
+              <%= link_to '#' do %>
+                <%= image_tag 'google-plus.png', :class => 'social-button' %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to '#' do %>
+                <%= image_tag 'facebook.png', :class => 'social-button' %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to '#' do %>
+                <%= image_tag 'twitter.png', :class => 'social-button' %>
+              <% end %>
+            </li>
           </ul>
         </div>
       </div>
