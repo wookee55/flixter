@@ -1,6 +1,19 @@
 <div class="col-xs-10 col-xs-offset-1">
   <h1><%= current_lesson.title %></h1>
-  <p><%= current_lesson.subtitle %></p>
+  <div class="clearfix">
+    <div class="pull-left">
+      <p><%= current_lesson.subtitle %></p>
+    </div>
+
+    <div class="pull-right">
+      <% if current_lesson.next_lesson.present? %>
+        <%= link_to lesson_path(current_lesson.next_lesson) do %>
+          Next Lesson
+          <span class="glyphicon glyphicon-forward"></span>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
 
   <video id="MY_VIDEO_1" class="video-js vjs-default-skin vjs-big-play-centered vjs-fluid" controls preload="auto" width="auto" height="auto" poster="/assets/black.jpg" data-setup="{}">
      <source src="<%= current_lesson.video.to_s %>" type='video/mp4'>
