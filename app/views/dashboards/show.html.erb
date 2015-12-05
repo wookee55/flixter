@@ -6,28 +6,30 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-xs-12 col-sm-8">
-          <p><%= course.description %></p>
+          <p class="pull-left"><%= course.description %></p>
         </div>
         <div class="col-xs-12 col-sm-4  text-center">
-          <%= link_to "More Info...", course_path(course), :class => 'btn btn-lg btn-primary' %>
+          <%= link_to "More Info...", course_path(course), :class => 'btn btn-lg btn-primary pull-right' %>
         </div>
       </div>
     </div>
+    <br>
   <% end %>
-
+  <br><hr><br>
   <h1>What I'm Teaching</h1>
-    <% current_user.courses.each do |course| %>
-      <h3><%= link_to course.title, course_path(course) %></h3>
-      <%= image_tag course.image, :class => 'img-responsive' %>
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-xs-12 col-sm-8">
-            <p><%= course.description %></p>
-          </div>
-          <div class="col-xs-12 col-sm-4  text-center">
-            <%= link_to "More Info...", course_path(course), :class => 'btn btn-lg btn-primary' %>
-          </div>
+  <% current_user.courses.each do |course| %>
+    <h3><%= link_to course.title, course_path(course) %></h3>
+    <%= image_tag course.image, :class => 'img-responsive' %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8">
+          <p class="pull-left"><%= course.description %></p>
+        </div>
+        <div class="col-xs-12 col-sm-4  text-center">
+          <%= link_to "More Info...", course_path(course), :class => 'btn btn-lg btn-primary pull-right' %>
         </div>
       </div>
-    <% end %>
+    </div>
+    <br>
+  <% end %>
 </article>
