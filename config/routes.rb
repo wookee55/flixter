@@ -1,5 +1,6 @@
 Flixter::Application.routes.draw do
   devise_for :users
+  resource :dashboard, :only => [:show]
   root 'static_pages#index'
   get 'privacy', :to => 'static_pages#privacy'
 
@@ -18,6 +19,8 @@ Flixter::Application.routes.draw do
       resources :sections, :only => [:create]
     end
   end
+
+
 
 
 
