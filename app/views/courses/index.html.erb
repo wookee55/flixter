@@ -1,21 +1,23 @@
-<h1>Learn something today</h1>
-<hr>
-<ul class="courses">
-  <% @courses.each do |course| %>
-    <li class="course">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col col-sm-6 col-xs-12">
-            <%= image_tag course.image, :class => 'img-responsive' %>
-          </div>
-          <div class="col col-sm-6 col-xs-12">
-            <h3><%= link_to course.title, course_path(course) %></h3>
-            <p><%= course.description %><p>
-            <br>
-            <%= link_to 'Learn more', course_path(course), :class => 'btn btn-primary btn-large' %>
+<article class="container">
+  <h1>Learn something today</h1>
+  <hr>
+  <ul class="courses">
+    <% @courses.each do |course| %>
+      <li class="course">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col col-sm-6 col-xs-12">
+              <%= image_tag course.image, :class => 'img-responsive' %>
+            </div>
+            <div class="col col-sm-6 col-xs-12">
+              <h3><%= link_to course.title, course_path(course) %></h3>
+              <p><%= course.description %><p>
+              <br>
+              <%= link_to 'Learn more', course_path(course), :class => 'btn btn-primary btn-large' %>
+            </div>
           </div>
         </div>
-      </div>
-    </li>
-  <% end %>
-</ul>
+      </li>
+    <% end %>
+  </ul>
+</article>

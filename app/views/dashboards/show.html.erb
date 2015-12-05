@@ -1,4 +1,4 @@
-<div class="booyah-box col-xs-10 col-xs-offset-1">
+<article class="container">
   <h1>What I'm Learning</h1>
   <% current_user.enrolled_courses.each do |course| %>
     <h3><%= link_to course.title, course_path(course) %></h3>
@@ -30,4 +30,4 @@
         </div>
       </div>
     <% end %>
-</div>
+</article>
